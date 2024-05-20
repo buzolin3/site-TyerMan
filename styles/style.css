@@ -1,0 +1,185 @@
+/* Header Navbar */
+.header-style {
+    background-color: var(--cor-destaques);
+
+}
+
+.navbar {
+    background-color: var(--cor-destaques);
+}
+
+.navbar-nav {
+    margin-left: 72%;
+    gap: 0;
+    font-size: 18px;
+}
+
+.nav-link {
+    margin: 10px 10px 0px 10px;
+}
+
+.container-img {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.carrinho-cel{
+    display: none;
+}
+
+.navbar-titulo {
+    color: var(--cor-titulo);
+    font-size: 2.2em;
+    margin-left: 10px;
+    margin-top: 7px;
+    font-weight: 700;
+}
+
+
+.img-1, .img-2, .img-3 {
+    display: none;
+}
+
+
+
+/*Filtro*/
+
+.span-link {
+    text-decoration: none;
+    color: var(--cor-texto-destaque);
+    font-weight: 500;
+}
+
+.div-filtro {
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.txt-filtro {
+    margin-right: 20px;
+}
+
+
+.btn-surf, .btn-premium {
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 0px solid rgba(0, 0, 0, 0.493);
+    background-color: var(--cor-background);
+}
+
+.btn-surf:hover, .btn-premium:hover {
+    padding: 3px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    background-color: var(--cor-link);
+}
+
+
+/* Catalogo Camisas */
+.main-camisas {
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.div-camisas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    order: 3;
+    flex-grow: 3;
+}
+
+.card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
+    width: 20rem;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}
+
+.sobre-camisa {
+    font-size: 15px;
+}
+
+
+/*offcanvas camisa*/
+.offcanvas-camiseta {
+    margin: 10%;
+}
+
+.offcanvas.offcanvas-start {
+    top: -50px;
+}
+
+.body-camisetas {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.cor-offcanvas {
+    display: flex;
+    gap: 30px;
+}
+
+#selecione {
+    color: red;
+}
+
+
+
+/*Contatos*/
+.div-ctt {
+    margin-top: 40px;
+}
+
+.link-ctt {
+    width: 100px;
+    height: 100px;
+    padding: 15px 15px;
+    margin: 20px;
+    border: 0px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    border-radius: 3px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.txt-contato {
+    font-size: 22px;
+}
+
+.link-ctt:hover {
+    border: 1px solid rgba(0, 0, 0, 0.384);
+}
+
+.bi {
+    padding: 5px;
+}
+
+
+/*Footer*/
+.div-footer {
+    margin-top: 100px;
+    height: 50px;
+    width: 100%;
+    background-color: var(--cor-background);
+    border-top: 1px solid rgba(0, 0, 0, 0.452);
+}
+
+
+
+/* Carrinho */
+.btn-remover {
+    border: none;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--cor-destaques);
+    color: red;
+}

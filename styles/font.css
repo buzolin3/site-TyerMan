@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@100;300;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+    font-family: "Montserrat", sans-serif;
+    <weight>: Use a value from 100 to 900
+
+    font-family: "Alice", serif;
+    <weight>: Use a value from 400
+
+    font-family: "Raleway", sans-serif;
+    <weight>: Use a value from 100 to 900
+
+    font-family: "Lato", sans-serif;
+    <weight>: Use a value from 100, 300, 400 our 700
+    */
+
+
+:root {
+    --cor-titulo: rgb(48, 48, 48);
+    --cor-texto-destaque: rgb(0, 89, 255);
+    --cor-texto: rgb(0, 0, 0);
+    --cor-background: rgb(218, 218, 218);
+    --cor-link: rgb(230, 230, 230);
+    --cor-destaques: rgb(255, 255, 255);
+}
+
+
+/* Página Inteira */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 2s;
+}
+
+.body-style {
+    background-color: var(--cor-background);
+    font-family: "Montserrat", sans-serif;
+}

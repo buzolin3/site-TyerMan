@@ -1,0 +1,86 @@
+/*Para Celular*/
+@media screen and (min-width: 300px) and (max-width: 750px){
+    
+    .navbar-titulo{
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .carrinho-cel{
+        display: block;
+    }
+
+    .carrinho-pc{
+        display: none;
+    }
+
+    .img-1{
+        display: block;
+    }
+
+    .div-filtro{
+        font-size: 14px;
+    }
+
+    .btn-surf, .btn-premium{
+        padding: 2px 5px;
+    }
+
+    #Contatos{
+        width: 80%;
+        margin: auto;
+    }
+
+    .txt-contato{
+        font-size: 15px;
+    }
+
+    .link-ctt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        width: 200px;
+    }
+
+    .offcanvas-carrinho{
+        width: 100%;
+    }
+}
+
+/*Para tablet*/
+@media screen and (min-width: 750px) and (max-width: 1350px) {
+    .img-2{
+        display: block;
+    }
+
+    .navbar-nav{
+        margin-left: 40%;
+    }
+
+    .card{
+        width: 16rem;
+    }
+}
+
+/*Note*/
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+
+    .navbar-nav{
+        margin-left: 60%;
+    }
+
+    .img-3{
+        display: block;
+    }
+}
+
+/*PC*/
+@media screen and (min-width: 1650px) {
+    .img-3{
+        display: block;
+    }
+
+
+
+}
