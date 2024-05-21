@@ -13,6 +13,7 @@ var dinheiroRadio = document.getElementById("flexRadioDefault1");
 var cartaoRadio = document.getElementById("flexRadioDefault2");
 var pixRadio = document.getElementById("flexRadioDefault3");
 var troco = document.getElementById("troco");
+var chavePix = document.getElementById("chavePix");
 
 document.addEventListener('DOMContentLoaded', function () {
     var entrega = document.getElementById("entrega");
@@ -42,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if(this.checked){
             troco.classList.remove('d-none');
             troco.classList.add('d-block');
+            chavePix.classList.add('d-none');
+            chavePix.classList.remove('d-block');
         }
     })
 
@@ -49,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if(this.checked){
             troco.classList.add('d-none');
             troco.classList.remove('d-block');
+            chavePix.classList.add('d-none');
+            chavePix.classList.remove('d-block');
         }
     })
 
@@ -56,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if(this.checked){
             troco.classList.add('d-none');
             troco.classList.remove('d-block');
+            chavePix.classList.add('d-block');
+            chavePix.classList.remove('d-none');
         }
     })
 });
