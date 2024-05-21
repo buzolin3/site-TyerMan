@@ -23,7 +23,15 @@
     justify-content: flex-start;
 }
 
+.numero-carrinho-pc{
+    display: block;
+}
+
 .carrinho-cel{
+    display: none;
+}
+
+.numero-carrinho-cel{
     display: none;
 }
 
@@ -35,15 +43,14 @@
     font-weight: 700;
 }
 
-
 .img-1, .img-2, .img-3 {
     display: none;
 }
 
 
 
-/*Filtro*/
 
+/*Filtro*/
 .span-link {
     text-decoration: none;
     color: var(--cor-texto-destaque);
@@ -61,7 +68,6 @@
     margin-right: 20px;
 }
 
-
 .btn-surf, .btn-premium {
     padding: 3px 10px;
     border-radius: 10px;
@@ -75,6 +81,7 @@
     border: 1px solid rgba(0, 0, 0, 0.493);
     background-color: var(--cor-link);
 }
+
 
 
 /* Catalogo Camisas */
@@ -107,6 +114,7 @@
 }
 
 
+
 /*offcanvas camisa*/
 .offcanvas-camiseta {
     margin: 10%;
@@ -122,9 +130,20 @@
     gap: 200px;
 }
 
+.tamanho-camiseta{
+    width: 500px;
+}
+
 .cor-offcanvas {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+}
+
+.cor-mais4{
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 #selecione {
@@ -164,6 +183,8 @@
 }
 
 
+
+
 /*Footer*/
 .div-footer {
     margin-top: 100px;
@@ -175,11 +196,57 @@
 
 
 
+
 /* Carrinho */
+
+.offcanvas-title{
+    color: var(--cor-destaques);
+}
+
+.offcanvas-carrinho-body{
+    background-color: var(--cor-background);
+    display: flex;
+    gap: 50px;
+}
+
+.input-carrinho{
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    background-color: var(--cor-background);
+    border-radius: 5px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.obrigatorio{
+    font-size: 18px;
+    color: red;
+
+}
+
+.btn-envio{
+    border: 1px solid black;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
+    background-color: var(--cor-destaques);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-envio:hover{
+    border: 1px solid black;
+    background-color: var(--cor-background);
+    border-radius: 5px;
+}
+
 .btn-remover {
     border: none;
     width: 20px;
     border-radius: 50%;
     background-color: var(--cor-destaques);
     color: red;
+}
+
+.btn-enviar{
+    height: 50px;
 }

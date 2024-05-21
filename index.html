@@ -22,15 +22,16 @@
                 <img src="img/logo-preto(2).png" alt="Logo" width="70" height="60"
                     class="d-inline-block align-text-top ">
                 <h1 class="navbar-titulo">Tyer Man - Outlet</h1>
-                <div class="fw-medium mt-2 ms-4 carrinho-cel" type="button" style="cursor:pointer" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                class="bi bi-bag" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
-                            </svg>
-                        </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <div class="fw-medium mt-2 ms-4 carrinho-cel" type="button" style="cursor:pointer"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                        class="bi bi-bag p-0" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                </div>
+                <p id="numero-carrinho" class="numero-carrinho-cel"></p>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,71 +41,76 @@
                         <a class="nav-link fw-medium" aria-current="page" href="#">Home</a>
                         <a class="nav-link fw-medium" href="#todasCamisas">Produtos</a>
                         <a class="nav-link fw-medium" href="#Contatos">Contatos</a>
-                        <div class="fw-medium mt-2 ms-4 carrinho-pc" type="button" style="cursor:pointer" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <div class="fw-medium mt-2 ms-4 carrinho-pc" type="button" style="cursor:pointer"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                class="bi bi-bag" viewBox="0 0 16 16">
+                                class="bi bi-bag p-0" viewBox="0 0 16 16">
                                 <path
                                     d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
                             </svg>
                         </div>
-                        <p id="numero-carrinho"></p>
+                        <p id="numero-carrinho2" class="numero-carrinho-pc"></p>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="offcanvas offcanvas-end offcanvas-carrinho w-100" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
+    <div class="offcanvas offcanvas-end offcanvas-carrinho w-100" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header bg-dark">
+            <img src="img/logo-branca(2).png" class="me-3" width="46" alt="Logo TyerMan">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho De Compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body offcanvas-carrinho-body">
             <div>
-                <p class="carrinho" id="produtosAdicionados">Produtos Selecionados:</p>
+                <p class="carrinho text-center" id="produtosAdicionados">Produtos Selecionados:</p>
             </div>
             <hr>
             <div class="text-center">
                 <h5>Dados do cliente</h5>
-                <label>Nome: <span class="obrigatorio">* Obrigatório *</span></label>
+                <label>Nome: <span class="obrigatorio">*</span></label>
                 <br>
-                <input type="text" placeholder="Nome:" id="nome" class="nome">
+                <input type="text" placeholder="Nome:" id="nome" class="nome input-carrinho">
                 <br>
-                <label>Celular: <span class="obrigatorio">* Obrigatório *</span></label>
+                <label>Celular: <span class="obrigatorio">*</span></label>
                 <br>
-                <input type="number" placeholder="Celular" id="celular" class="celular">
+                <input type="number" placeholder="Celular" id="celular" class="celular input-carrinho">
             </div>
             <hr>
-            <div>
-                <p class="endereco-txt">Digite o Endereço para entrega</p>
-                <label>Cidade: <span class="obrigatorio">* Obrigatório *</span></label>
-                <br>
-                <input type="text" placeholder="Cidade" id="cidade" class="cidade">
-                <br>
-                <label>Bairro: <span class="obrigatorio">* Obrigatório *</span></label>
-                <br>
-                <input type="text" placeholder="Bairro" id="bairro" class="bairro">
-                <br>
-                <label>Rua: <span class="obrigatorio">* Obrigatório *</span></label>
-                <br>
-                <input type="text" placeholder="Rua:" id="rua" class="endereco">
-                <br>
-                <label>Número: <span class="obrigatorio">* Obrigatório *</span></label>
-                <br>
-                <input type="number" placeholder="N°" id="numeroCasa" class="numero_casa">
-                <br>
-                <label>Complemento:</label>
-                <br>
-                <input type="text" placeholder="Complemento" id="complemento" class="endereco">
-                <br>
-                <br>
-                <p class="taxa-entrega"> Taxa de Entrega em Taquaritinga/SP: R$ 7,00</p>
-                <p class="taxa-entrega"> Taxa de Entrega para outras cidades: Consultar via WhatsApp</p>
+            <div class="">
+                <h5 class="endereco-txt">Selecione Método de Envio</h5>
+                <div class="d-flex gap-5">
+                    <div>
+                        <button onclick="mostrarEntrega()" class="btn btn-dark" name="btnEntrega">Entrega</button>
+                    </div>
+                    <div>
+                        <button onclick="mostrarRetirada()" class="btn btn-dark">Retirada</button>
+                    </div>
+                </div>
+                <p class="entrega d-none mt-3">Digite o Endereço de entrega</p>
+                <label class="entrega d-none">Cidade: <span class="obrigatorio">*</span></label>
+                <input type="text" placeholder="Cidade" id="cidade" class="cidade input-carrinho entrega d-none">
+                <label class="entrega d-none">Bairro: <span class="obrigatorio">*</span></label>
+                <input type="text" placeholder="Bairro" id="bairro" class="bairro input-carrinho entrega d-none">
+                <label class="entrega d-none">Rua: <span class="obrigatorio">*</span></label>
+                <input type="text" placeholder="Rua:" id="rua" class="endereco input-carrinho entrega d-none">
+                <label class="entrega d-none">Número: <span class="obrigatorio">*</span></label>
+                <input type="number" placeholder="N°" id="numeroCasa" class="numero_casa input-carrinho entrega d-none">
+                <label class="entrega d-none">Complemento:</label>
+                <input type="text" placeholder="Complemento" id="complemento"
+                    class="endereco input-carrinho entrega d-none">
+                <p class="taxa-entrega entrega d-none"> Taxa de Entrega: </p>
+                <p class="taxa-entrega entrega d-none"> Taquaritinga/SP: R$ 7,00</p>
+                <p class="taxa-entrega entrega d-none"> Outras cidades: Consultar via WhatsApp</p>
+
+                <p class="retirada d-none mt-3">Retire no endereço:</p>
+                <p class="retirada d-none">Rua Pastor Abel Pereira de Souza, 473, Laranjeiras, Taquaritinga/SP</p>
+                <p class="retirada d-none">Consultar Dia e Horario da Retirada via WhatsApp</p>
             </div>
-            <hr>
-            <div class="valor" id="total">Valor a Pagar:</div>
             <div class="text-start">
+                <div class="valor" id="total">Valor a Pagar:</div>
                 <p>Selecione a forma de Pagamento:</p>
                 <div class="form-check text-start">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
@@ -115,17 +121,19 @@
                     <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
                 </div>
                 <label>Troco para:</label>
-                <input type="number" placeholder="R$" class="troco text-start" id="troco">
+                <input type="number" placeholder="R$" class="troco text-start" id="troco input-carrinho">
             </div>
+        </div>
+        <div class="offcanvas-footer offcanvas-carrinho-body txt-center">
             <div id="txtObrigatorio"></div>
-            <button class="btn btn-primary btn-enviar" onclick="enviarPedido()"> Enviar Pedido </button>
+            <button class="btn btn-primary btn-enviar m-auto" onclick="enviarPedido()"> Enviar Pedido </button>
         </div>
     </div>
 
     <div class="img-promo">
-        <img class="img-3" src="img/promo-3.png" alt="promocao" width="100%" height="500px">
-        <img class="img-2" src="img/promo-2.png" alt="promocao" width="100%" height="500px">
-        <img class="img-1" src="img/promo-1.png" alt="promocao" width="100%" height="400px">
+        <img class="img-3" src="img/promoinaug.png" alt="promocao" width="100%" height="500px">
+        <img class="img-2" src="img/promoinaug1.png" alt="promocao" width="100%" height="500px">
+        <img class="img-1" src="img/promoinaug2.png" alt="promocao" width="100%" height="400px">
     </div>
 
     <br>
@@ -162,18 +170,18 @@
         <div class="div-camisas">
 
             <div class="card " id="Premium">
-                <img src="img/camisas/EA7-GA.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/EA7-GA.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Armani EA7-GA</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1"
                         aria-controls="offcanvas1">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas1" aria-labelledby="offcanvas1Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas1Label">Tyer Man - Outlet</h5>
@@ -181,13 +189,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/EA7-GA.png" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/EA7-GA.png" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Emporio Armani EA7</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Premium</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>159,00 </span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -219,7 +229,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Armani EA7', 159)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Armani EA7', 129)">Adicionar no
                                         Carrinho</button>
                                 </div>
                             </div>
@@ -229,18 +239,18 @@
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/Nike-x-Liverpool.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/Nike-x-Liverpool.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Nike x Liverpool</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2"
                         aria-controls="offcanvas2">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas2" aria-labelledby="offcanvas2Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas2Label">Tyer Man - Outlet</h5>
@@ -248,13 +258,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/Nike-x-Liverpool.png" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/Nike-x-Liverpool.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Nike x Liverpool</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Surf</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>119,00</span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -289,7 +301,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Nike x Liverpool', 119)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Nike x Liverpool', 99)">Adicionar no
                                         Carrinho
                                     </button>
                                 </div>
@@ -300,18 +312,18 @@
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/armani-milano.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/armani-milano.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Armani Milano</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3"
                         aria-controls="offcanvas3">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas3" aria-labelledby="offcanvas3Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas3Label">Tyer Man - Outlet</h5>
@@ -319,13 +331,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/armani-milano.png" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/armani-milano.png " class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Emporio Armani Milano</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Premium</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>159,00</span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -357,7 +371,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Armani Milano', 159)">Adicionar no Carrinho
+                                        onclick="adicionarCarrinho('Camiseta Armani Milano', 129)">Adicionar no Carrinho
                                     </button>
                                 </div>
                             </div>
@@ -367,18 +381,18 @@
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/nike-raio.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/nike-raio.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Nike Shoes</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas4"
                         aria-controls="offcanvas4">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas4" aria-labelledby="offcanvas4Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas4Label">Tyer Man - Outlet</h5>
@@ -386,13 +400,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/nike-raio.jpg" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/nike-raio.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Nike Shoes</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Surf</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>119,00</span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -427,7 +443,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Nike x Liverpool', 119)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Nike x Liverpool', 99)">Adicionar no
                                         Carrinho
                                     </button>
                                 </div>
@@ -438,19 +454,19 @@
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/armani-estampa-escrita.png" class="card-img-top" alt="armani modelo2"
+                <img src="img/camisas/armani-estampa-escrita.png" class="card-img-top" alt="camiseta-tela"
                     height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Emporio Armani Plane</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas5"
                         aria-controls="offcanvas5">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas5" aria-labelledby="offcanvas5Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas5Label">Tyer Man - Outlet</h5>
@@ -458,13 +474,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/armani-estampa-escrita.png" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/armani-estampa-escrita.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Emporio Armani Plane</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Premium</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>159,00</span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -493,7 +511,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Armani Plane', 159)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Armani Plane', 129)">Adicionar no
                                         Carrinho
                                     </button>
                                 </div>
@@ -504,18 +522,18 @@
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/boss-galaxia.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/boss-galaxia.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Hugo Boss Galaxia</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas6"
                         aria-controls="offcanvas6">
                         Selecionar
                     </button>
-                    <div class="offcanvas offcanvas-start w-75 h-75 offcanvas-camiseta" style="top: -100px;"
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
                         tabindex="-1" id="offcanvas6" aria-labelledby="offcanvas6Label">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvas6Label">Tyer Man - Outlet</h5>
@@ -523,13 +541,15 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body body-camisetas">
-                            <div><img src="img/camisas/boss-galaxia.png" width="500" alt="armani 2"></div>
+                            <div><img src="img/camisas/boss-galaxia.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
                             <div>
                                 <h3 class="txt-offcanvas">Camiseta Hugo Boss Galaxia</h3>
                                 <br>
                                 <h5 class="txt-offcanvas">Linha: Premium</h5>
                                 <br>
-                                <h5 class="txt-offcanvas">R$ <span>159,00</span></h5>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
                                 <br>
                                 <p class="text-start">Cor:</p>
                                 <div class="cor-offcanvas">
@@ -539,11 +559,11 @@
                                     <input type="radio" class="btn-check" name="options-cor" value="Branco" id="bg2"
                                         autocomplete="off">
                                     <label class="btn btn-outline-dark" for="bg2">Branco</label>
-                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho" id="bg3"
-                                        autocomplete="off">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="bg3" autocomplete="off">
                                     <label class="btn btn-outline-dark" for="bg3">Azul Marinho</label>
-                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Musgo" id="bg4"
-                                        autocomplete="off">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Musgo"
+                                        id="bg4" autocomplete="off">
                                     <label class="btn btn-outline-dark" for="bg4">Verde Musgo</label>
                                     <input type="radio" class="btn-check" name="options-cor" value="Off White" id="bg5"
                                         autocomplete="off">
@@ -570,7 +590,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Boss Galaxia', 159)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Boss Galaxia', 129)">Adicionar no
                                         Carrinho
                                     </button>
                                 </div>
@@ -581,318 +601,2008 @@
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/Diesel-basicas-linha1.png" class="card-img-top" alt="armani modelo2"
+                <img src="img/camisas/Diesel-basicas-linha1.png" class="card-img-top" alt="camiseta-tela"
                     height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Diesel Básicas Modelo 1</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas7"
                         aria-controls="offcanvas7">
                         Selecionar
-                    </button>
+                    </button>~
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas7" aria-labelledby="offcanvas7Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas7Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/Diesel-basicas-linha1.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Diesel Básica Modelo 1</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho" id="3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Musgo" id="4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4">Verde Musgo</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="5">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="6"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Bege" id="7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="7">Bege</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho Vinho"
+                                        id="8" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="8">Vermelho Vinho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Diese Básica Modelo 1', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/diesel-basica-linha2.png" class="card-img-top" alt="armani modelo2"
-                    height="300px">
+                <img src="img/camisas/oakley-basica.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
-                    <h5 class="card-text"> Camiseta Diesel Básicas Modelo 2</h5>
+                    <h5 class="card-text"> Camiseta Oakley Básica Modelo 1</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas8"
                         aria-controls="offcanvas8">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas8" aria-labelledby="offcanvas8Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas8Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/oakley-basica.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Oakley Básica Modelo 1</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ob1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="ob2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="ob3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ob4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ob9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ob10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ob11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ob12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ob12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Oakley Básica Modelo 1', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/nike-radiate-energy.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/nike-radiate-energy.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Nike Energy</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas9"
                         aria-controls="offcanvas9">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas9" aria-labelledby="offcanvas9Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas9Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/nike-radiate-energy.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Nike Energy</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ne1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="ne2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="ne3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne3">Cinza</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ne4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ne9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ne10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ne11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ne12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ne12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Nike Energy', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/nike-brasil.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/nike-brasil.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Nike Brasil</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas10"
                         aria-controls="offcanvas10">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas10" aria-labelledby="offcanvas10Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas10Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/nike-brasil.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Nike Brasil</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="nb1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="nb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="nb3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="nb4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="nb9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="nb10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="nb11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="nb12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="nb12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Nike Brasil', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/armani-AX.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/armani-AX.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Armani AX </h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas11"
                         aria-controls="offcanvas11">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas11" aria-labelledby="offcanvas11Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas11Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/armani-AX.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Armani AX</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ax1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="ax2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="ax3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax3">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ax4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ax9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ax10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ax11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ax12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ax12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Armani AX', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/boss-estampada-pelo.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/boss-estampada-pelo.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Hugo Boss II</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas12"
                         aria-controls="offcanvas12">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas12" aria-labelledby="offcanvas12Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas12Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/boss-estampada-pelo.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Hugo Boss II</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="bp1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="bp2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="bp3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp3">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="bp4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="bp5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp5">Off White</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="bp9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="bp10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="bp11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="bp12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="bp12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Hugo Boss II', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/Nike-SB.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/Nike-SB.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Nike-SB</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas13"
                         aria-controls="offcanvas13">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas13" aria-labelledby="offcanvas13Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas13Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/Nike-SB.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Nike-SB</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="sb1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="sb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="sb3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="sb4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb4">Cinza</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="sb9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="sb10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="sb11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="sb12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="sb12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Nike-SB', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/oakley-estampa-escrito.png" class="card-img-top" alt="armani modelo2"
+                <img src="img/camisas/oakley-estampa-escrito.png" class="card-img-top" alt="camiseta-tela"
                     height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Oakley Man</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas14"
                         aria-controls="offcanvas14">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas14" aria-labelledby="offcanvas14Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas14Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/oakley-estampa-escrito.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Oakley Man</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="om1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="om2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="om3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="om4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="om9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="om10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="om11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="om12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="om12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Oakley Man', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/nike-ying-yang.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/nike-ying-yang.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Nike Ying-Yang</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas15"
                         aria-controls="offcanvas15">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas15" aria-labelledby="offcanvas15Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas15Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/nike-ying-yang.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Nike Ying-Yang</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="yy1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="yy2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="yy3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy3">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="yy4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy4">Cinza</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="yy9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="yy10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="yy11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="yy12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="yy12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Nike Ying-Yang', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/diesel-division.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/diesel-division.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Diesel Division</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
                     <br>
                     <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas16"
                         aria-controls="offcanvas16">
                         Selecionar
                     </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas16" aria-labelledby="offcanvas16Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas16Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/diesel-division.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Diesel Division</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="dd1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="dd2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="dd3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd3">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="dd4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="dd9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="dd10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="dd11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="dd12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="dd12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Diesel Division', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/quik-silver-69.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/quik-silver-69.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Quik Silver 69</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas17"
+                        aria-controls="offcanvas17">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas17" aria-labelledby="offcanvas17Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas17Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/quik-silver-69.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Quik Silver 69</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="61"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="61">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="62"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="62">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="63" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="63">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="64"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="64">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="69"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="69">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="610"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="610">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="611"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="611">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="612"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="612">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Quik Silver 69', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/prada-basica-linha1.png" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/prada-basica-linha1.png" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Prada Básica</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas18"
+                        aria-controls="offcanvas18">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas18" aria-labelledby="offcanvas18Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas18Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/prada-basica-linha1.png" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Prada Básica</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="p1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="p2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro" id="p3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p3">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="p4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Bege" id="p5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p5">Bege</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Musgo" id="p6"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p6">Verde Musgo</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="p9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="p10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="p11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="p12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="p12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Prada Básica', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/diesel-contrario2.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/diesel-contrario2.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Diesel Die</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas19"
+                        aria-controls="offcanvas19">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas19" aria-labelledby="offcanvas19Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas19Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/diesel-contrario2.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Diesel Die </h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="d1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="d2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d2">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="d3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d3">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="d4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="d5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d5">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Lilás" id="d6"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d6">Lilás</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="d9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="d10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="d11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="d12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="d12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Diesel Die', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/lacoste-basica-listras.jpg" class="card-img-top" alt="armani modelo2"
+                <img src="img/camisas/lacoste-basica-listras.jpg" class="card-img-top" alt="camiseta-tela"
                     height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Lacoste Line</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas20"
+                        aria-controls="offcanvas20">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas20" aria-labelledby="offcanvas20Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas20Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/lacoste-basica-listras.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Lacoste Line</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ll1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="ll2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll2">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="ll3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ll4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="ll5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll5">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro" id="ll6"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll6">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Laranja" id="ll7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll7">Laranja</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ll9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ll10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ll11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ll12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ll12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Lacoste Line', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/armani-basica.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/armani-basica.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Emporio Armani Básica Modelo 1</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas21"
+                        aria-controls="offcanvas21">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas21" aria-labelledby="offcanvas21Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas21Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/armani-basica.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Emporio Armani Básica Modelo 1</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="a1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="a2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="a3" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a3">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="a4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="a5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a5">Cinza</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="a9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="a10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="a11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="a12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="a12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Armani Básica Modelo 1', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/armani-basica2.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/armani-basica2.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Emporio Armani Básica Modelo 2</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas22"
+                        aria-controls="offcanvas22">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas22" aria-labelledby="offcanvas22Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas22Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/armani-basica2.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Emporio Armani Básica Modelo 2</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ab1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="ab2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="ab3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab3">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ab4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab4">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro" id="ab5"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab5">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Amarelo" id="ab6"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab6">Amarelo</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="ab7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab7">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="ab8"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab8">Off White</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ab9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ab10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ab11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ab12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ab12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Armani Básica Modelo 2', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/quik-silver-waterman.jpg" class="card-img-top" alt="armani modelo2"
-                    height="300px">
+                <img src="img/camisas/quik-silver-waterman.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text"> Camiseta Quik Silver Walterman</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas23"
+                        aria-controls="offcanvas23">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas23" aria-labelledby="offcanvas23Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas23Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/quik-silver-waterman.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Quik Silver Walterman</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="6011"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6011">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="622"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="622">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="633"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="633">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="644"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="644">Cinza</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="699"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="699">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="6110"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6110">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="6111"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6111">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="6112"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6112">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Quik Silver Walterman', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/ea7-logo-escrito.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/ea7-logo-escrito.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Emporio Armani EA7 Modelo 2</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas24"
+                        aria-controls="offcanvas24">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas24" aria-labelledby="offcanvas24Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas24Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/ea7-logo-escrito.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Emporio Armani EA7 Modelo 2</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="ea1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea1">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="ea2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="ea3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea3">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="ea4"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea4">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="ea9"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea9">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="ea10"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea10">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="ea11"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea11">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="ea12"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="ea12">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Armani EA7 Modelo 2', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/diesel-logo-D.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/diesel-logo-D.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Diesel D</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas25"
+                        aria-controls="offcanvas25">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas25" aria-labelledby="offcanvas25Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas25Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/diesel-logo-D.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Diesel D</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="0d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="0d">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="1d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1d">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="2d" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2d">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4d">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9d">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10d">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11d">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12d"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12d">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Diesel D', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/Burberry.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/Burberry.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Burberry</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas26"
+                        aria-controls="offcanvas26">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas26" aria-labelledby="offcanvas26Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas26Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/Burberry.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Burberry</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1bb">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2bb">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro" id="3bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3bb">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4bb">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="5bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="5bb">Off White</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9bb">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10bb">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11bb">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12bb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12bb">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Burberry', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/nike-s72.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/nike-s72.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Nike S.7.2</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas27"
+                        aria-controls="offcanvas27">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas27" aria-labelledby="offcanvas27Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas27Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/nike-s72.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Nike S.7.2</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1n7">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2n7">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="3n7" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3n7">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4n7">Vermelho</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9n7">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10n7">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11n7">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12n7"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12n7">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Nike S.7.2', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/tommy-logo-escrito.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/tommy-logo-escrito.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Tommy Hilfiger</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas28"
+                        aria-controls="offcanvas28">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas28" aria-labelledby="offcanvas28Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas28Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/tommy-logo-escrito.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Tommy Hilfiger</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1tm">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2tm">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="3tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3tm">Off White</label>
+
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9tm">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10tm">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11tm">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12tm"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12tm">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Tommy Hilfiger', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/lacoste-basica1.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/lacoste-basica1.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Lacoste Básica Modelo 1</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas29"
+                        aria-controls="offcanvas29">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas29" aria-labelledby="offcanvas29Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas29Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/lacoste-basica1.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Lacoste Básica Modelo 1</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="1lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1lb">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2lb">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Água" id="3lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3lb">Verde Água</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4lb">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho Vinho"
+                                        id="5lb" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="5lb">Vermelho Vinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Bege" id="6lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6lb">Bege</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Amarelo" id="7lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="7lb">Amarelo</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="8lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="8lb">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro" id="9lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9lb">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="10lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10lb">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Laranja" id="11lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11lb">Laranja</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="12lb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12lb">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="13"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="13">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="14"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="14">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="15"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="15">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Lacoste Básica Modelo 1', 129)">Adicionar
+                                        no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/lacoste-basica2.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/lacoste-basica2.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Lacoste Básica Modelo 2</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas30"
+                        aria-controls="offcanvas30">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas30" aria-labelledby="offcanvas30Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas30Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/lacoste-basica2.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Lacoste Básica Modelo 2</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="1lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1lb2">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2lb2">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde Escuro"
+                                        id="3lb2" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3lb2">Verde Escuro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4lb2">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="5lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="5lb2">Cinza</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Bege" id="6lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6lb2">Bege</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Rosa" id="7lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="7lb2">Rosa</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="8lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="8lb2">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Claro"
+                                        id="9lb2" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9lb2">Azul Claro</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="10lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10lb2">Verde</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Laranja" id="11lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11lb2">Laranja</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="15lb2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="15lb2">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="16lbb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="16lbb">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="17lbb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="17lbb">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="18lbb"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="18lbb">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Lacoste Básica Modelo 2', 129)">Adicionar
+                                        no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Premium">
-                <img src="img/camisas/lacoste-logo-escrito.jpg" class="card-img-top" alt="armani modelo2"
-                    height="300px">
+                <img src="img/camisas/lacoste-logo-escrito.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Lacoste Simple</h5>
                     <h6 class="text-start">Linha: Premium</h6>
                     <br>
-                    <h5>R$<span> 159,00</span></h5>
+                    <h5>De <s>R$: 159,00</s> <br><br>Por: R$ 129,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas31"
+                        aria-controls="offcanvas31">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas31" aria-labelledby="offcanvas31Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas31Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/lacoste-logo-escrito.jpg" class="tamanho-camiseta"
+                                    alt="camiseta-selecao"></div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Lacoste Simple</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Premium</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 159,00</s><br> <br> Por R$
+                                    129,00</h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1ls">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2ls">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul Marinho"
+                                        id="3ls" autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3ls">Azul Marinho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Vermelho" id="4ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4ls">Vermelho</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Off White" id="5ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="5ls">Off White</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="6ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="6ls">Cinza</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Verde" id="7ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="7ls">Verde</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9ls">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10ls">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11ls">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12ls"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12ls">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Lacoste Simple', 129)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="card " id="Surf">
-                <img src="img/camisas/quik-silver.jpg" class="card-img-top" alt="armani modelo2" height="300px">
+                <img src="img/camisas/quik-silver.jpg" class="card-img-top" alt="camiseta-tela" height="300px">
                 <div class="card-body text-center">
                     <h5 class="card-text">Camiseta Quik Silver Prism</h5>
                     <h6 class="text-start">Linha: Surf</h6>
                     <br>
-                    <h5>R$<span> 119,00</span></h5>
+                    <h5>De <s>R$: 119,00</s> <br><br>Por: R$ 99,00 </h5>
+                    <br>
+                    <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas32"
+                        aria-controls="offcanvas32">
+                        Selecionar
+                    </button>
+                    <div class="offcanvas offcanvas-start offcanvas-camiseta" style="top: -100px; width: 75%;"
+                        tabindex="-1" id="offcanvas32" aria-labelledby="offcanvas32Label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvas32Label">Tyer Man - Outlet</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body body-camisetas">
+                            <div><img src="img/camisas/quik-silver.jpg" class="tamanho-camiseta" alt="camiseta-selecao">
+                            </div>
+                            <div>
+                                <h3 class="txt-offcanvas">Camiseta Quik Silver Prism</h3>
+                                <br>
+                                <h5 class="txt-offcanvas">Linha: Surf</h5>
+                                <br>
+                                <h5 class="txt-offcanvas">De <s class="valor-promoc">R$ 119,00</s><br> <br> Por R$ 99,00
+                                </h5>
+                                <br>
+                                <p class="text-start">Cor:</p>
+                                <div class="cor-offcanvas cor-mais4">
+                                    <input type="radio" class="btn-check" name="options-cor" value="Preto" id="1qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="1qk">Preto</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Branco" id="2qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="2qk">Branco</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Azul" id="3qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="3qk">Azul</label>
+                                    <input type="radio" class="btn-check" name="options-cor" value="Cinza" id="4qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="4qk">Cinza</label>
+                                </div>
+                                <br>
+                                <p class="text-start">Tamanho: </p>
+                                <div class="cor-offcanvas">
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="P" id="9qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="9qk">P</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="M" id="10qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="10qk">M</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="G" id="11qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="11qk">G</label>
+                                    <input type="radio" class="btn-check" name="options-tamanho" value="GG" id="12qk"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-dark" for="12qk">GG</label>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark mt-5"
+                                        onclick="adicionarCarrinho('Camiseta Quik Silver Prism', 99)">Adicionar no
+                                        Carrinho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

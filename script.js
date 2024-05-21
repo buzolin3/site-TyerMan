@@ -5,12 +5,57 @@ var numero = 0;
 var totalElement;
 var camisetaPremium = document.querySelectorAll("#Premium");
 var camisetaSurf = document.querySelectorAll("#Surf");
+var entrega = document.querySelectorAll(".entrega");
+var retirada =document.querySelectorAll(".retirada");
 var carrinho = [];
 
 
+//Coloca classe no media query
+function checkWindowSize() {
+    const elementos = document.querySelectorAll('.offcanvas-camiseta');
+    const largura = window.innerWidth;
+
+    elementos.forEach(elemento => {
+        if (largura >= 300 && largura <= 700) {
+            elemento.classList.add('w-100');
+            elemento.classList.add('top-0');
+            elemento.classList.remove('w-75');
+        } else {
+            elemento.classList.add('w-75');
+            elemento.classList.remove('top-0');
+            elemento.classList.remove('w-100');
+        }
+    });
+}
+
+// Verifica o tamanho da janela ao carregar a página
+window.addEventListener('load', checkWindowSize);
+
+// Verifica o tamanho da janela ao redimensionar a janela
+window.addEventListener('resize', checkWindowSize);
 
 
+//mostrar Entrega
+function mostrarEntrega(){
+    retirada.forEach(function(retirada){
+        retirada.classList.add('d-none');
+    })
+    entrega.forEach(function(entrega){
+        entrega.classList.remove('d-none');
+        entrega.classList.add('d-block');
+    })
+}
 
+//mostrar Retirada
+function mostrarRetirada(){
+    entrega.forEach(function(entrega){
+        entrega.classList.add('d-none');
+    })
+    retirada.forEach(function(retirada){
+        retirada.classList.remove('d-none');
+        retirada.classList.add('d-block');
+    })
+}
 
 //Mostrar todos produtos
 function mostrarTodos() {
@@ -78,6 +123,7 @@ function adicionarCarrinho(nomeProduto, valorProduto) {
         produtosAdicionados.appendChild(mensagemProduto);
         numero++;
         (document.getElementById("numero-carrinho").innerHTML = numero);
+        (document.getElementById("numero-carrinho2").innerHTML = numero);
         var botaoRemover = document.createElement("button");
         botaoRemover.textContent = "-";
         botaoRemover.classList.add("btn-remover");
@@ -87,6 +133,7 @@ function adicionarCarrinho(nomeProduto, valorProduto) {
             valorTxt.textContent = "Valor a pagar: R$ " + totalCompra.toFixed(2);
             numero--;
             (document.getElementById("numero-carrinho").innerHTML = numero);
+            (document.getElementById("numero-carrinho2").innerHTML = numero);
         };
         mensagemProduto.appendChild(botaoRemover);
         produtosAdicionados.appendChild(mensagemProduto);

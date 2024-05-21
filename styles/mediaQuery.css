@@ -1,6 +1,6 @@
 /*Para Celular*/
 @media screen and (min-width: 300px) and (max-width: 750px){
-    
+    /*NavBar*/
     .navbar-titulo{
         font-size: 15px;
         font-weight: 700;
@@ -14,10 +14,20 @@
         display: none;
     }
 
+    .numero-carrinho-cel{
+        display: block;
+    }
+
+    .numero-carrinho-pc{
+        display: none;
+    }
+
     .img-1{
         display: block;
     }
 
+
+    /*Filtro*/
     .div-filtro{
         font-size: 14px;
     }
@@ -26,6 +36,8 @@
         padding: 2px 5px;
     }
 
+
+    /*Contatos*/
     #Contatos{
         width: 80%;
         margin: auto;
@@ -43,6 +55,28 @@
         width: 200px;
     }
 
+
+    /*OffCanvas Camiseta*/
+    .offcanvas-camiseta {
+        margin: 0;
+    }
+    
+    .offcanvas.offcanvas-start {
+        top: 0px;
+    }
+
+    .tamanho-camiseta{
+        width: 300px;
+        margin-top: 280px;
+    }
+
+    .body-camisetas {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+    /*OffCanva Carrinho*/
     .offcanvas-carrinho{
         width: 100%;
     }
@@ -80,7 +114,4 @@
     .img-3{
         display: block;
     }
-
-
-
 }
