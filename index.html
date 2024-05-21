@@ -58,75 +58,89 @@
 
     <div class="offcanvas offcanvas-end offcanvas-carrinho w-100" tabindex="-1" id="offcanvasRight"
         aria-labelledby="offcanvasRightLabel">
+
         <div class="offcanvas-header bg-dark">
             <img src="img/logo-branca(2).png" class="me-3" width="46" alt="Logo TyerMan">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho De Compras</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close bg-light me-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body offcanvas-carrinho" style="padding-top: 10%;">
-            <div>
-                <h5 class="carrinho text-center" id="produtosAdicionados">Produtos Selecionados:</h5>
+
+        <div class="offcanvas-body offcanvas-carrinho" style="padding-top: 4%;">
+            <div class="selecao selecao-produtos text-center">
+                <h4 class="carrinho text-center">Produtos Selecionados: </h4>
+                <p class="carrinho text-center" id="produtosAdicionados"> </p>
             </div>
-            <hr>
-            <div class="text-center">
-                <h5>Dados do cliente</h5>
-                <label>Nome: <span class="obrigatorio">*</span></label>
+
+            <i class="bi bi-arrow-right"></i>
+
+            <div class="selecao text-center">
+                <h4>Dados do cliente</h4>
                 <br>
-                <input type="text" placeholder="Nome:" id="nome" class="nome input-carrinho">
+                <input type="text" placeholder="Nome: *" id="nome" class="nome input-carrinho">
                 <br>
-                <label>Celular: <span class="obrigatorio">*</span></label>
+                <input type="number" placeholder="Celular: *" id="celular" class="celular input-carrinho">
                 <br>
-                <input type="number" placeholder="Celular" id="celular" class="celular input-carrinho">
+                <input type="email" placeholder="Email: *" id="email" class="email input-carrinho">
+                <br>
+                <input type="number" placeholder="CPF: *" id="cpf" class="cpf input-carrinho">
             </div>
-            <hr>
-            <div class="">
-                <h5 class="endereco-txt">Selecione Método de Envio</h5>
-                <div class="d-flex gap-5">
+
+            <i class="bi bi-arrow-right"></i>
+
+            <div class="selecao">
+                <h4 class="endereco-txt mb-4">Método de Envio</h4>
+                <div class="d-flex gap-4">
                     <div>
-                        <button onclick="mostrarEntrega()" class="btn btn-dark" name="btnEntrega">Entrega</button>
+                        <button onclick="mostrarEntrega()" class="btn-black">Entrega</button>
                     </div>
                     <div>
-                        <button onclick="mostrarRetirada()" class="btn btn-dark">Retirada</button>
+                        <button onclick="mostrarRetirada()" class="btn-black">Retirada</button>
                     </div>
                 </div>
-                <p class="entrega d-none mt-3">Digite o Endereço de entrega</p>
-                <label class="entrega d-none">Cidade: <span class="obrigatorio">*</span></label>
-                <input type="text" placeholder="Cidade" id="cidade" class="cidade input-carrinho entrega d-none">
-                <label class="entrega d-none">Bairro: <span class="obrigatorio">*</span></label>
-                <input type="text" placeholder="Bairro" id="bairro" class="bairro input-carrinho entrega d-none">
-                <label class="entrega d-none">Rua: <span class="obrigatorio">*</span></label>
-                <input type="text" placeholder="Rua:" id="rua" class="endereco input-carrinho entrega d-none">
-                <label class="entrega d-none">Número: <span class="obrigatorio">*</span></label>
-                <input type="number" placeholder="N°" id="numeroCasa" class="numero_casa input-carrinho entrega d-none">
-                <label class="entrega d-none">Complemento:</label>
+                <p class="entrega d-none mt-4">Digite o Endereço de entrega</p>
+                <input type="text" placeholder="Cidade *" id="cidade" class="cidade input-carrinho entrega d-none">
+                <input type="text" placeholder="Bairro *" id="bairro" class="bairro input-carrinho entrega d-none">
+                <input type="text" placeholder="Rua *" id="rua" class="endereco input-carrinho entrega d-none">
+                <input type="number" placeholder="N° *" id="numeroCasa" class="numero_casa input-carrinho entrega d-none">
                 <input type="text" placeholder="Complemento" id="complemento"
                     class="endereco input-carrinho entrega d-none">
                 <p class="taxa-entrega entrega d-none"> Taxa de Entrega: </p>
                 <p class="taxa-entrega entrega d-none"> Taquaritinga/SP: R$ 7,00</p>
-                <p class="taxa-entrega entrega d-none"> Outras cidades: Consultar via WhatsApp</p>
+                <p class="taxa-entrega entrega d-none"> Outras cidades: Consultar WhatsApp</p>
 
-                <p class="retirada d-none mt-3">Retire no endereço:</p>
-                <p class="retirada d-none">Rua Pastor Abel Pereira de Souza, 473, Laranjeiras, Taquaritinga/SP</p>
-                <p class="retirada d-none">Consultar Dia e Horario da Retirada via WhatsApp</p>
+                <p class="retirada d-none mt-4">Retire no endereço:</p>
+                <p class="retirada d-none">Consultar Endereço via WhatsApp</p>
+                <p class="retirada d-none">Consultar Dia e Horário via WhatsApp</p>
             </div>
-            <div class="text-start">
-                <div class="valor" id="total">Valor a Pagar:</div>
+
+            <i class="bi bi-arrow-right"></i>
+
+            <div class="selecao text-start">
+                <h4>Método De Pagamento</h4>
+                <br>
+                <div class="valor fw-medium fs-5" id="total">Valor a Pagar:</div>
+                <br>
                 <p>Selecione a forma de Pagamento:</p>
                 <div class="form-check text-start">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                     <label class="form-check-label " for="flexRadioDefault2"> Cartão </label>
                 </div>
                 <div class="form-check text-start">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                    <label class="form-check-label " for="flexRadioDefault3"> Pix </label>
+                </div>
+                <div class="form-check text-start">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
                 </div>
                 <label>Troco para:</label>
-                <input type="number" placeholder="R$" class="troco text-start" id="troco input-carrinho">
+                <input type="number" placeholder="R$" class="troco text-start input-carrinho" id="troco">
             </div>
         </div>
+
         <div class="offcanvas-footer offcanvas-carrinho txt-center">
             <div id="txtObrigatorio"></div>
-            <button class="btn btn-primary btn-enviar m-auto" onclick="enviarPedido()"> Enviar Pedido </button>
+            <button class="btn btn-dark btn-enviar m-auto mb-4" onclick="enviarPedido()"> Enviar Pedido </button>
         </div>
     </div>
 
@@ -443,7 +457,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-dark mt-5"
-                                        onclick="adicionarCarrinho('Camiseta Nike x Liverpool', 99)">Adicionar no
+                                        onclick="adicionarCarrinho('Camiseta Nike Shoes', 99)">Adicionar no
                                         Carrinho
                                     </button>
                                 </div>

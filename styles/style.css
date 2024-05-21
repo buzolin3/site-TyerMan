@@ -203,6 +203,13 @@
     color: var(--cor-destaques);
 }
 
+.selecao{
+    color: grey;
+}
+
+.selecao:hover{
+    color: var(--cor-texto);
+}
 
 .offcanvas-carrinho{
     background-color: var(--cor-carrinho);
@@ -212,10 +219,31 @@
     margin: auto;
 }
 
+.selecao:hover .input-carrinho{
+    border-bottom: 1px solid black;
+    color: var(--cor-texto);
+}
+
+.btn-black{
+    background-color: #424649;
+    border: none;
+    outline: none;
+    color: var(--cor-link);
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.btn-black:hover{
+    background-color: #212529;
+}
+
+
 .input-carrinho{
-    border: 1px solid rgba(0, 0, 0, 0.384);
+    border: none;
+    border-bottom: 1px solid rgb(163, 163, 163);
+    outline: none;
     background-color: var(--cor-carrinho);
-    border-radius: 5px;
+    box-sizing: border-box;
     width: 200px;
     padding: 5px;
     margin-bottom: 20px;
@@ -246,10 +274,20 @@
     border: none;
     width: 20px;
     border-radius: 50%;
-    background-color: var(--cor-destaques);
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--cor-carrinho);
     color: red;
 }
 
 .btn-enviar{
     height: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
