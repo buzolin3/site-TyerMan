@@ -199,7 +199,11 @@
 
 /* Carrinho */
 
-.offcanvas-title{
+.bi-arrow-down{
+    display: none;
+}
+
+.title-carrinho{
     color: var(--cor-destaques);
 }
 
@@ -237,6 +241,9 @@
     background-color: #212529;
 }
 
+.retiradaClass{
+    display: none;
+}
 
 .input-carrinho{
     border: none;
@@ -287,7 +294,12 @@
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
 input[type=number] {
     -moz-appearance: textfield;
     appearance: textfield;
+}
+
+.troco{
+    width: 150px;
 }

@@ -61,8 +61,9 @@
 
         <div class="offcanvas-header bg-dark">
             <img src="img/logo-branca(2).png" class="me-3" width="46" alt="Logo TyerMan">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrinho De Compras</h5>
-            <button type="button" class="btn-close bg-light me-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title title-carrinho" id="offcanvasRightLabel">Carrinho De Compras</h5>
+            <button type="button" class="btn-close bg-light me-4" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body offcanvas-carrinho" style="padding-top: 4%;">
@@ -72,6 +73,7 @@
             </div>
 
             <i class="bi bi-arrow-right"></i>
+            <i class="bi bi-arrow-down text-center mb-3"></i>
 
             <div class="selecao text-center">
                 <h4>Dados do cliente</h4>
@@ -86,40 +88,49 @@
             </div>
 
             <i class="bi bi-arrow-right"></i>
+            <i class="bi bi-arrow-down text-center mb-3"></i>
 
             <div class="selecao">
                 <h4 class="endereco-txt mb-4">Método de Envio</h4>
                 <div class="d-flex gap-4">
-                    <div>
-                        <button onclick="mostrarEntrega()" class="btn-black">Entrega</button>
+                    <div class="form-check text-start">
+                        <input class="form-check-input" type="radio" name="RadioEnvio" id="entregaRadio"
+                            value="Entrega">
+                        <label class="form-check-label " for="entregaRadio"> Entrega </label>
                     </div>
-                    <div>
-                        <button onclick="mostrarRetirada()" class="btn-black">Retirada</button>
+                    <div class="form-check text-start">
+                        <input class="form-check-input" type="radio" name="RadioEnvio" id="retiradaRadio"
+                            value="Retirada">
+                        <label class="form-check-label " for="retiradaRadio"> Retirada </label>
                     </div>
                 </div>
-                <p class="entrega d-none mt-4">Digite o Endereço de entrega</p>
-                <input type="text" placeholder="Cidade *" id="cidade" class="cidade input-carrinho entrega d-none">
-                <input type="text" placeholder="Bairro *" id="bairro" class="bairro input-carrinho entrega d-none">
-                <input type="text" placeholder="Rua *" id="rua" class="endereco input-carrinho entrega d-none">
-                <input type="number" placeholder="N° *" id="numeroCasa" class="numero_casa input-carrinho entrega d-none">
-                <input type="text" placeholder="Complemento" id="complemento"
-                    class="endereco input-carrinho entrega d-none">
-                <p class="taxa-entrega entrega d-none"> Taxa de Entrega: </p>
-                <p class="taxa-entrega entrega d-none"> Taquaritinga/SP: R$ 7,00</p>
-                <p class="taxa-entrega entrega d-none"> Outras cidades: Consultar WhatsApp</p>
+                <div class="entregaClass d-flex flex-column" id="entrega">
+                    <p class="mt-4">Digite o Endereço de entrega</p>
+                    <input type="text" placeholder="Cidade *" id="cidade" class="cidade input-carrinho">
+                    <input type="text" placeholder="Bairro *" id="bairro" class="bairro input-carrinho">
+                    <input type="text" placeholder="Rua *" id="rua" class="endereco input-carrinho">
+                    <input type="number" placeholder="N° *" id="numeroCasa" class="numero_casa input-carrinho">
+                    <input type="text" placeholder="Complemento" id="complemento" class="endereco input-carrinho">
+                </div>
 
-                <p class="retirada d-none mt-4">Retire no endereço:</p>
-                <p class="retirada d-none">Consultar Endereço via WhatsApp</p>
-                <p class="retirada d-none">Consultar Dia e Horário via WhatsApp</p>
+                <div class="retiradaClass" id="retirada">
+                    <p class="retirada mt-4">Retire no endereço:</p>
+                    <p class="retirada">Consultar Endereço via WhatsApp</p>
+                    <p class="retirada">Consultar Dia e Horário via WhatsApp</p>
+                </div>
             </div>
 
             <i class="bi bi-arrow-right"></i>
+            <i class="bi bi-arrow-down text-center mb-3"></i>
 
-            <div class="selecao text-start">
+            <div class="selecao text-center">
                 <h4>Método De Pagamento</h4>
                 <br>
                 <div class="valor fw-medium fs-5" id="total">Valor a Pagar:</div>
                 <br>
+                <p class="taxa-entrega mb-0"> Taxa de Entrega: </p>
+                <p class="taxa-entrega"> Consultar no WhatsApp</p>
+
                 <p>Selecione a forma de Pagamento:</p>
                 <div class="form-check text-start">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
@@ -133,13 +144,12 @@
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                     <label class="form-check-label " for="flexRadioDefault1"> Dinheiro </label>
                 </div>
-                <label>Troco para:</label>
-                <input type="number" placeholder="R$" class="troco text-start input-carrinho" id="troco">
+                <input type="number" placeholder="Troco Para:" class="troco text-start input-carrinho d-none"
+                    id="troco">
             </div>
         </div>
 
         <div class="offcanvas-footer offcanvas-carrinho txt-center">
-            <div id="txtObrigatorio"></div>
             <button class="btn btn-dark btn-enviar m-auto mb-4" onclick="enviarPedido()"> Enviar Pedido </button>
         </div>
     </div>

@@ -67,7 +67,7 @@
 
     .tamanho-camiseta{
         width: 300px;
-        margin-top: 280px;
+        margin-top: 140px;
     }
 
     .body-camisetas {
@@ -79,6 +79,15 @@
     /*OffCanva Carrinho*/
     .offcanvas-carrinho{
         width: 100%;
+        flex-direction: column;
+    }
+
+    .bi-arrow-right{
+        display: none;
+    }
+
+    .bi-arrow-down{
+        display: block;
     }
 }
 
