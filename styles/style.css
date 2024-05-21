@@ -203,15 +203,18 @@
     color: var(--cor-destaques);
 }
 
-.offcanvas-carrinho-body{
-    background-color: var(--cor-background);
+
+.offcanvas-carrinho{
+    background-color: var(--cor-carrinho);
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
 }
 
 .input-carrinho{
     border: 1px solid rgba(0, 0, 0, 0.384);
-    background-color: var(--cor-background);
+    background-color: var(--cor-carrinho);
     border-radius: 5px;
     width: 200px;
     padding: 5px;
